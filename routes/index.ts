@@ -13,7 +13,7 @@ const messages: message[] = [
     added: new Date(),
   },
   {
-    text: "Hi there!",
+    text: "Hello!",
     user: "Charles",
     added: new Date(),
   },
@@ -25,5 +25,16 @@ let router = Router();
 router.get("/", function (req: Request, res: Response, next: NextFunction) {
   res.render("index", { title: "Mini Messageboard", messages: messages });
 });
+
+// router.get("/new", function (req: Request, res: Response, next: NextFunction) {
+//   res.render("form");
+// });
+
+// router.post("/new", (req: Request, res: Response, next: NextFunction) => {
+//   const messageText: String = req.body.messageText;
+//   const messageUser: String = req.body.messageUser;
+//   messages.push({ text: messageText, user: messageUser, added: new Date() });
+//   res.redirect("/");
+// });
 
 module.exports = router;
