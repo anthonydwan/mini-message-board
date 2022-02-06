@@ -6,13 +6,14 @@ block content
     p Welcome to #{title}! Let us know what's on your mind!
   main
     button.new-message-button(onclick='window.location="/new"') What's on your mind?
-    each msg in messages
+    
+    - for(var x = len - 1; x >=0; x--)
       div.messageDiv
-        p.msg #{msg.text}
+        p.msg #{msg[x].text}
         <hr>
         div.messageDiv-info
-          p #{msg.user}
-          p #{msg.added}
+          p #{msg[x].user}
+          p #{msg[x].added}
 
 
 
