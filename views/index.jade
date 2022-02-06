@@ -1,13 +1,19 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  a(href="/new" ) New
-  ul
-  each msg in messages
-    div 
-      p #{msg.user}
-      p #{msg.added}
-      p #{msg.text}
+  header
+    h1= title
+    p Welcome to #{title}! Let us know what's on your mind!
+  main
+    button.new-message-button(onclick='window.location="/new"') What's on your mind?
+    each msg in messages
+      div.messageDiv
+        p.msg #{msg.text}
+        <hr>
+        div.messageDiv-info
+          p #{msg.user}
+          p #{msg.added}
+
+
+
 
