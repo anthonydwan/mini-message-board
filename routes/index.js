@@ -8,6 +8,10 @@ const messages_1 = __importDefault(require("../public/javascripts/messages"));
 let router = (0, express_1.Router)();
 /* GET home page. */
 router.get("/", function (req, res, next) {
-    res.render("index", { title: "Little Board", messages: messages_1.default });
+    res.render("index", {
+        title: "Little Board",
+        msg: messages_1.default,
+        len: messages_1.default.length,
+    });
 });
 module.exports = router;

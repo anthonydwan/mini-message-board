@@ -5,7 +5,11 @@ let router = Router();
 
 /* GET home page. */
 router.get("/", function (req: Request, res: Response, next: NextFunction) {
-  res.render("index", { title: "Little Board", messages: messages });
+  res.render("index", {
+    title: "Little Board",
+    msg: messages,
+    len: messages.length,
+  });
 });
 
 module.exports = router;
