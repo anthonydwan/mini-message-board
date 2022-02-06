@@ -91,6 +91,7 @@ button.form-button {
   display: flex;
   min-height: 12px;
   font-size: 16px;
+  justify-content: space-between;
 }
 
 textarea {
